@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes" />
     <title>vcf-toggle-button demo</title>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
     <script type="module">
@@ -17,9 +17,24 @@
   <body>
     <div class="vertical-section-container">
       <demo-snippet>
+        <style>
+          :root {
+            --demo-snippet-demo_-_display: flex;
+          }
+        </style>
         <template>
-          <vcf-toggle-button></vcf-toggle-button>
+          <vcf-toggle-button label="Toggle Button"></vcf-toggle-button>
+          <vcf-toggle-button id="toggle-button" checked></vcf-toggle-button>
+          <vcf-toggle-button disabled></vcf-toggle-button>
+          <vcf-toggle-button disabled checked></vcf-toggle-button>
         </template>
+        <script>
+          window.addEventListener('WebComponentsReady', () => {
+            document.getElementById('toggle-button').addEventListener('change', e => {
+              console.log(e.detail.checked);
+            });
+          });
+        </script>
       </demo-snippet>
     </div>
   </body>

@@ -1,28 +1,26 @@
-# &lt;vcf-element&gt;
-
-**Note that this is a starter boilerplate for creating Polymer 3 based components.**
+# &lt;vcf-toggle-button&gt;
 
 ## Installation
 
-Install `vcf-element`:
+Install `vcf-toggle-button`:
 
 ```sh
-npm i @vaadin/vcf-element --save
+npm i @vaadin/vcf-toggle-button --save
 ```
 
 Once installed, import it in your application:
 
 ```js
-import '@vaadin/vcf-element/vcf-element.js';
+import '@vaadin/vcf-toggle-button/vcf-toggle-button.js';
 ```
 
 ## Running demo
 
-1. Fork the `vcf-element` repository and clone it locally.
+1. Fork the `vcf-toggle-button` repository and clone it locally.
 
 1. Make sure you have [npm](https://www.npmjs.com/) installed.
 
-1. When in the `vcf-element` directory, run `npm install` to install dependencies.
+1. When in the `vcf-toggle-button` directory, run `npm install` to install dependencies.
 
 1. Run `npm start` to open the demo.
 

@@ -2,7 +2,7 @@ import { html, PolymerElement } from '@polymer/polymer/polymer-element';
 import { ThemableMixin } from '@vaadin/vaadin-themable-mixin';
 import { ElementMixin } from '@vaadin/vaadin-element-mixin';
 
-class VcfElement extends ElementMixin(ThemableMixin(PolymerElement)) {
+class VcfToggleButton extends ElementMixin(ThemableMixin(PolymerElement)) {
   static get template() {
     return html`
       <style>
@@ -14,7 +14,7 @@ class VcfElement extends ElementMixin(ThemableMixin(PolymerElement)) {
   }
 
   static get is() {
-    return 'vcf-element';
+    return 'vcf-toggle-button';
   }
 
   static get version() {
@@ -30,13 +30,13 @@ class VcfElement extends ElementMixin(ThemableMixin(PolymerElement)) {
   }
 }
 
-customElements.define(VcfElement.is, VcfElement);
+customElements.define(VcfToggleButton.is, VcfToggleButton);
 
 /**
  * @namespace Vaadin
  */
-window.Vaadin.VcfElement = VcfElement;
+window.Vaadin.VcfToggleButton = VcfToggleButton;
 
 if (window.Vaadin.runIfDevelopmentMode) {
-  window.Vaadin.runIfDevelopmentMode('vaadin-license-checker', VcfElement);
+  window.Vaadin.runIfDevelopmentMode('vaadin-license-checker', VcfToggleButton);
 }

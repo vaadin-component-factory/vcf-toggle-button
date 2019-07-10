@@ -1,5 +1,5 @@
 {
-  "name": "vcf-toggle-button",
+  "name": "@vaadin-component-factory/vcf-toggle-button",
   "version": "0.1.0",
   "description": "Vaadin Component Factory Toggle Button",
   "main": "theme/lumo/vcf-toggle-button.js",
@@ -7,7 +7,7 @@
   "license": "https://raw.githubusercontent.com/vaadin/vaadin-incubator-element/master/LICENSE",
   "repository": {
     "type": "git",
-    "url": "vaadin-component-factory/vcf-toggle-button"
+    "url": "git+https://github.com/vaadin-component-factory/vcf-toggle-button.git"
   },
   "keywords": [
     "Vaadin",
@@ -57,5 +57,12 @@
     "polymer-cli": "^1.9.10",
     "prettier": "^1.17.1",
     "wct-mocha": "^1.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/vaadin-component-factory/vcf-toggle-button/issues"
+  },
+  "homepage": "https://github.com/vaadin-component-factory/vcf-toggle-button#readme",
+  "directories": {
+    "test": "test"
   }
 }

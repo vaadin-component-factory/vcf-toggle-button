@@ -2,7 +2,7 @@ import { html } from '@polymer/polymer/polymer-element.js';
 import '@vaadin/vaadin-lumo-styles/color.js';
 
 const template = html`
-  <dom-module id="my-checkbox-styles" theme-for="vaadin-checkbox">
+  <dom-module id="vcf-toggle-custom-styles" theme-for="vaadin-checkbox">
     <template>
       <style>
         :host(.toggle-button) [part='checkbox'] {

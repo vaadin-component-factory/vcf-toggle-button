@@ -8,10 +8,32 @@ Install `vcf-toggle-button`:
 npm i @vaadin-component-factory/vcf-toggle-button --save
 ```
 
+## Usage
 Once installed, import it in your application:
 
 ```js
 import '@vaadin-component-factory/vcf-toggle-button/vcf-toggle-button.js';
+```
+
+And use it:
+
+```html
+<vcf-toggle-button></vcf-toggle-button>
+```
+
+### Attributes
+
+ - `label`: Provide a label for the toggle button.
+ - `checked`: Changes the state of toggle button to "on".
+ - `disabled`: Disables the toggle button.
+
+### Event
+ - `change`: Fires whenever the state of the toggle button is changed:
+
+```javascript
+document.querySelector('vcf-toggle-button').addEventListener('change', e => {
+  console.log(e.detail.checked);
+});
 ```
 
 ## Running demo

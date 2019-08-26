@@ -27,14 +27,14 @@
           <vcf-toggle-button id="toggle-button" checked></vcf-toggle-button>
           <vcf-toggle-button disabled></vcf-toggle-button>
           <vcf-toggle-button disabled checked></vcf-toggle-button>
-        </template>
-        <script>
-          window.addEventListener('WebComponentsReady', () => {
-            document.getElementById('toggle-button').addEventListener('change', e => {
-              console.log(e.detail.checked);
+          <script>
+            window.addEventListener('WebComponentsReady', () => {
+              document.getElementById('toggle-button').addEventListener('change', e => {
+                console.log(e.detail.checked);
+              });
             });
-          });
-        </script>
+          </script>
+        </template>
       </demo-snippet>
     </div>
   </body>

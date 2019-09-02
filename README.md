@@ -1,5 +1,9 @@
 # &lt;vcf-toggle-button&gt;
 
+## Demo
+
+https://vcf-toggle-button.netlify.com/
+
 ## Installation
 
 Install `vcf-toggle-button`:
@@ -9,6 +13,7 @@ npm i @vaadin-component-factory/vcf-toggle-button --save
 ```
 
 ## Usage
+
 Once installed, import it in your application:
 
 ```js
@@ -23,12 +28,13 @@ And use it:
 
 ### Attributes
 
- - `label`: Provide a label for the toggle button.
- - `checked`: Changes the state of toggle button to "on".
- - `disabled`: Disables the toggle button.
+- `label`: Provide a label for the toggle button.
+- `checked`: Changes the state of toggle button to "on".
+- `disabled`: Disables the toggle button.
 
 ### Event
- - `change`: Fires whenever the state of the toggle button is changed:
+
+- `change`: Fires whenever the state of the toggle button is changed:
 
 ```javascript
 document.querySelector('vcf-toggle-button').addEventListener('change', e => {
@@ -48,7 +54,7 @@ document.querySelector('vcf-toggle-button').addEventListener('change', e => {
 
 ## Contributing
 
-  To contribute to the component, please read [the guideline](https://github.com/vaadin/vaadin-core/blob/master/CONTRIBUTING.md) first.
+To contribute to the component, please read [the guideline](https://github.com/vaadin/vaadin-core/blob/master/CONTRIBUTING.md) first.
 
 ## License
 

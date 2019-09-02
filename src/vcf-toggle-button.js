@@ -31,7 +31,7 @@ class VcfToggleButton extends ElementMixin(ThemableMixin(PolymerElement)) {
   }
 
   static get version() {
-    return '0.1.3';
+    return '0.1.4';
   }
 
   static get properties() {

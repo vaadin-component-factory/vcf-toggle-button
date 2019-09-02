@@ -1,6 +1,6 @@
 {
   "name": "@vaadin-component-factory/vcf-toggle-button",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Vaadin Component Factory Toggle Button",
   "main": "theme/lumo/vcf-toggle-button.js",
   "author": "Vaadin Ltd",

@@ -7,11 +7,32 @@
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
     <script type="module" src="demo.js"></script>
     <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles"></style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+        .centered {
+          max-width: 1000px;
+        }
+        main {
+          opacity: 1;
+          transition: opacity 1s;
+        }
+        main.hidden {
+          opacity: 0;
+        }
+      </style>
     </custom-style>
+    <script>
+      window.addEventListener('WebComponentsReady', () => document.querySelector('main').classList.remove('hidden'));
+    </script>
   </head>
   <body>
-    <div class="vertical-section-container">
+    <main class="vertical-section-container centered hidden">
+      <h3>Basic Usage</h3>
+      <demo-snippet>
+        <template>
+          <vcf-toggle-button label="Toggle Button"></vcf-toggle-button>
+        </template>
+      </demo-snippet>
+      <h3>Disabled</h3>
       <demo-snippet>
         <style>
           :root {
@@ -19,19 +40,30 @@
           }
         </style>
         <template>
-          <vcf-toggle-button label="Toggle Button"></vcf-toggle-button>
-          <vcf-toggle-button id="toggle-button" checked></vcf-toggle-button>
           <vcf-toggle-button disabled></vcf-toggle-button>
           <vcf-toggle-button disabled checked></vcf-toggle-button>
+        </template>
+      </demo-snippet>
+      <h3>Events</h3>
+      <demo-snippet>
+        <style>
+          :root {
+            --demo-snippet-demo_-_display: block;
+          }
+        </style>
+        <template>
+          <vcf-toggle-button id="toggle-button" checked></vcf-toggle-button>
+          <p>The toggle is "<span id="toggle-state">On</span>"</p>
           <script>
             window.addEventListener('WebComponentsReady', () => {
               document.getElementById('toggle-button').addEventListener('change', e => {
-                console.log(e.detail.checked);
+                const toggleState = document.getElementById('toggle-state');
+                toggleState.innerText = e.detail.checked ? 'On' : 'Off';
               });
             });
           </script>
         </template>
       </demo-snippet>
-    </div>
+    </main>
   </body>
 </html>

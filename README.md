@@ -17,7 +17,7 @@ npm i @vaadin-component-factory/vcf-toggle-button --save
 Once installed, import it in your application:
 
 ```js
-import '@vaadin-component-factory/vcf-toggle-button/vcf-toggle-button.js';
+import '@vaadin-component-factory/vcf-toggle-button';
 ```
 
 And use it:

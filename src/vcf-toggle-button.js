@@ -73,7 +73,3 @@ customElements.define(VcfToggleButton.is, VcfToggleButton);
  * @namespace Vaadin
  */
 window.Vaadin.VcfToggleButton = VcfToggleButton;
-
-if (window.Vaadin.runIfDevelopmentMode) {
-  window.Vaadin.runIfDevelopmentMode('vaadin-license-checker', VcfToggleButton);
-}

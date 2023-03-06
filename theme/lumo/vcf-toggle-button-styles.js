@@ -1,10 +1,13 @@
 import { html } from '@polymer/polymer/polymer-element.js';
 import '@vaadin/vaadin-lumo-styles/color.js';
+import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
 
-const template = html`
-  <dom-module id="vcf-toggle-custom-styles" theme-for="vaadin-checkbox">
-    <template>
-      <style>
+const vaadinCheckboxStyles = css`
+        :host(.toggle-button) {
+          --vaadin-checkbox-size: 1;
+          font-size: inherit;
+        }
+
         :host(.toggle-button) [part='checkbox'] {
           width: calc(1.5em * 2 - 12px);
           height: 1.5em;
@@ -15,6 +18,11 @@ const template = html`
 
         :host(.toggle-button[disabled]) [part='checkbox'] {
           background-color: var(--lumo-contrast-20pct);
+        }
+
+
+        :host(.toggle-button[disabled]) [part='checkbox']::after {
+          color: var(--lumo-primary-contrast-color);
         }
 
         :host(.toggle-button) [part='checkbox']::after {
@@ -45,21 +53,16 @@ const template = html`
         :host(.toggle-button[checked]) [part='checkbox']::after {
           transform: translate(calc(100% - 8px));
         }
-      </style>
-    </template>
-  </dom-module>
 `;
 
-document.head.appendChild(template.content);
+registerStyles('vaadin-checkbox', vaadinCheckboxStyles);
 
-const theme = document.createElement('dom-module');
-theme.id = 'vcf-toggle-button-lumo';
-theme.setAttribute('theme-for', 'vcf-toggle-button');
-theme.innerHTML = `
-    <template>
-      <style include="lumo-color">
+registerStyles('vcf-toggle-button', 
+        css`
         :host {}
-      </style>
-    </template>
-  `;
-theme.register(theme.id);
+        `,
+        {
+          includeId: 'lumo-color',
+          moduleId: 'vcf-toggle-button-lumo'
+        }
+);

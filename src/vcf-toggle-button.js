@@ -15,7 +15,7 @@ class VcfToggleButton extends ElementMixin(ThemableMixin(PolymerElement)) {
           margin-right: 0.25em;
         }
       </style>
-      <span part="label">[[label]]</span>
+      <span part="label" aria-label="{{label}}">[[label]]</span>
       <vaadin-checkbox
         class="toggle-button"
         checked="{{checked}}"
